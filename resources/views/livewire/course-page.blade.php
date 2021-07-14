@@ -15,9 +15,9 @@
             <div class="modules">
                 <div class="users-progress text-center text-light">
                     <div class="progress">
-                        <div class="progress-bar progress-bar-striped bg-success" style="width: 30%;"></div>
+                        <div class="progress-bar progress-bar-striped bg-success" style="width: {{$courseListItem->percentage}}%;"></div>
                     </div>
-                    <p>30% complete</p>
+                    <p>{{$courseListItem->percentage}}% complete</p>
                 </div>
                 <ul class="module-list">
                     <h5 class="text-light ml-4 py-3">Course Module</h5>

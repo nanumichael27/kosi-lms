@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\CourseController;
+use App\Http\Controllers\UserController;
 use App\Http\Livewire\Admin\ManageCourse;
 use Illuminate\Support\Facades\Route;
 
@@ -18,13 +19,13 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/',  fn() => view('index'))->name('index');
 
-Route::get('/dashboard', fn() => view('dashboard.dashboard'))->name('dashboard');
+Route::get('/dashboard', [UserController::class, 'dashboard'])->name('dashboard');
 
-Route::get('/favourites', fn() => view('dashboard.favourites'))->name('favourites');
+Route::get('/favourites', [UserController::class, 'favourites'])->name('favourites');
 
-Route::get('/my-courses', fn() => view('dashboard.mycourses'))->name('mycourses');
+Route::get('/my-courses', [UserController::class, 'courses'])->name('mycourses');
 
-Route::get('/user-settings', fn() => view('dashboard.settings'))->name('settings');
+Route::get('/user-settings', [UserController::class, 'settings'])->name('settings');
 
 Route::get('/coursepage/{id}', [CourseController::class, 'course'])->name('coursepage');
 

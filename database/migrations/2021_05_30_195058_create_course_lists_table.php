@@ -16,6 +16,10 @@ class CreateCourseListsTable extends Migration
         Schema::create('course_lists', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->foreignId('course_id')->onDeleteCascade();
+            $table->foreignId('user_id')->onDeleteCascade();
+            $table->float('percentage')->default(0)->nullable();
+            $table->string('videos')->default("[0]");
         });
     }
 

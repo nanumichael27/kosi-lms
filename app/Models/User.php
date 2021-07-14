@@ -42,6 +42,13 @@ class User extends Authenticatable
     ];
 
     public function courseList(){
-        return $this->hasOne(CourseList::class);
+        return $this->hasMany(CourseList::class);
     }
+
+    public function addCourseToList($id){
+        $this->courseList()->create([
+            'course_id' => $id
+        ]);
+    }
+
 }

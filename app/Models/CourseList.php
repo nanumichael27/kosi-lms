@@ -9,9 +9,36 @@ class CourseList extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'course_id'
+    ];
+
+    protected $casts = [
+        'videos' => 'array',
+    ];
+
     public function user(){
-        return $this->belongsToOne(User::class);
+        return $this->belongsTo(User::class);
     }
 
-    
+    public function course(){
+        return $this->belongsTo(Course::class);
+    }
+
+    public function addWatchedVideo($id){
+        $videos = $this->videos;
+        if(!in_array($id, $videos)){
+            array_push($videos, $id);
+            $this->videos=$videos;
+            $this->updatePercentage();
+          $this->save();
+        }
+    }
+
+    public function updatePercentage(){
+        $total = count($this->course->videos);
+        $watched = count($this->videos);
+        $this->percentage = ($watched/ $total)*100;
+    }
+
 }

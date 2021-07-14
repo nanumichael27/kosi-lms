@@ -21,7 +21,8 @@
         <div class="container">
             <div class="course">
                 <div class="headings">
-                    <h1>popular courses</h1>
+                    <!-- <h1>popular courses</h1> -->
+                    <h1>Courses</h1>
                     <a href="#">view all</a>
                 </div>
                 <div class="row">
@@ -37,7 +38,7 @@
                         </div>
                     </div>
                 @endforeach
-                    <div class="col-6 col-sm-6 col-md-4 col-lg-3 px-2">
+                    <!-- <div class="col-6 col-sm-6 col-md-4 col-lg-3 px-2">
                         <div class="course-box">
                             <img src="img/code.jpg" alt="" class="img-fluid">
                             <div class="course-details">
@@ -172,7 +173,7 @@
                                 <p class="playBack-time">Total playback time: 20:23:24 </p>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>

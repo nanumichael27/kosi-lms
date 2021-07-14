@@ -18,6 +18,12 @@
             <h3>Courses</h3>
         </a>
     </div>
+    <div class="sidebar-options" style="left: -15px;">
+        <a href="{{route('coursesearch')}}">
+            <i class="fa fa-search fa-2x"></i>
+            <h3>Find courses</h3>
+        </a>
+    </div>
     <div class="sidebar-options">
         <a href="{{route('settings')}}">
             <i class="fa fa-cog fa-2x"></i>

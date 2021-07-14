@@ -18,11 +18,11 @@
             <header class="dashboard-header">
                 <form>
                     <div class="dashboard-form">
-                        <img src="img/searchicon.svg" alt="" class="search-icon">
+                        <img src="{{asset('img/searchicon.svg')}}" alt="" class="search-icon">
                         <input type="search" class="form-control">
                     </div>
                 </form>
-                <img src="img/c-1.png" alt="avatar" class="avatar">
+                <img src="{{asset('img/c-1.png')}}" alt="avatar" class="avatar">
             </header>
             @section('content')
                 @show
